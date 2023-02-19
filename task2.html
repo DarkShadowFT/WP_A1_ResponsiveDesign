@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeoplePerHour</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans&display=swap"
+          rel="stylesheet">
+    <link href="fontawesome-free-6.3.0-web/css/fontawesome.css"
+          rel="stylesheet">
+    <link href="fontawesome-free-6.3.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-6.3.0-web/css/solid.css" rel="stylesheet">
+</head>
+<body>
+<div id="sidebar">
+    <div class="search-bar-sidebar">
+        <span>
+            <i class="fas fa-search"></i>
+        </span>
+        <span>SEARCH</span>
+    </div>
+    <ul>
+        <hr class="sidebar-divider"/>
+        <li><a href="#">How it works</a></li>
+        <hr class="sidebar-divider"/>
+        <li><a href="#">Log in</a></li>
+        <hr class="sidebar-divider"/>
+        <li><a href="#">Sign up</a></li>
+        <hr class="sidebar-divider"/>
+        <li><a href="#">Freelancer?</a></li>
+    </ul>
+</div>
+<div id="container">
+    <header>
+        <div class="header-left">
+            <img alt="" style="float: left" src="logo.svg" width="200vw"
+                 height="45vh"/>
+        </div>
+        <div class="header-right">
+            <div class="search-bar">
+                <span>
+                    <i class="fas fa-search"><small>SEARCH</small></i>
+                </span>
+            </div>
+            <div class="header-right-links">
+                <a href="#">How it works</a>
+                <a href="#">Log in</a>
+                <a href="#">Sign up</a>
+                <a href="#">Freelancer?</a>
+            </div>
+        </div>
+        <div id="hamburger" onclick="toggleNav()">
+            <span>&#9776;</span>
+        </div>
+    </header>
+    <!--    <div id="dropdown-header">-->
+    <!--        <a href="#">How it works</a>-->
+    <!--        <a href="#">Log in</a>-->
+    <!--        <a href="#">Sign up</a>-->
+    <!--        <a href="#">Freelancer?</a>-->
+    <!--    </div>-->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="">Technology & Programming</a></li>
+            <li><a href="">Writing & Translation</a></li>
+            <li><a href="">Design</a></li>
+            <li><a href="">Digital Marketing</a></li>
+            <li><a href="">Video, Photo & Image</a></li>
+            <li><a href="">Business</a></li>
+            <li><a href="">Music & Audio</a></li>
+            <li><a href="">Marketing, Branding & Sales</a></li>
+            <li><a href="">Social Media</a></li>
+        </ul>
+    </nav>
+    <nav class="navbar-responsive">
+        <a class="dropbtn" onclick="displayDropdown()">
+            Browse by Category <i class="fa fa-angle-down"></i>
+        </a>
+        <div id="dropdown-content">
+            <a href="#">Technology & Programming</a>
+            <a href="#">Writing & Translation</a>
+            <a href="#">Design</a>
+            <a href="#">Digital Marketing</a>
+            <a href="#">Video, Photo & Image</a>
+            <a href="#">Business</a>
+            <a href="#">Music & Audio</a>
+            <a href="#">Marketing, Branding & Sales</a>
+            <a href="#">Social Media</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="left">
+            <p>
+                Make bright ideas happen
+            </p>
+            <h1>
+                Access global talent on the freelancer website trusted by over 1
+                million businesses worldwide.
+            </h1>
+            <form action="#" method="get">
+                <span id="search_niche_box">
+                    <label for="search_niche"></label>
+                    <input id="search_niche" type="text"
+                           placeholder='Try "web development"'>
+                    <button>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </span>
+            </form>
+        </div>
+        <div class="right">
+            <img src="pph_main.webp" width="100%" alt="">
+        </div>
+    </div>
+</div>
+<script>
+  function toggleNav() {
+    console.log("hamburger clicked")
+    document.getElementById('sidebar').classList.toggle('active')
+    let cont = document.getElementById('container');
+
+    if (cont.classList.contains('slid')) {
+      // slide the container back to its initial position
+      cont.classList.remove('slid');
+    } else {
+      // slide the container to the left
+      cont.classList.add('slid');
+    }
+
+    // let dropdownContent = document.querySelector("#dropdown-header");
+    // if (dropdownContent.style.display === "block") {
+    //   dropdownContent.style.display = "none";
+    //
+    // } else {
+    //   dropdownContent.style.display = "block";
+    // }
+  }
+
+  function displayDropdown() {
+    let dropdownContent = document.querySelector("#dropdown-content");
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none"
+    } else {
+      dropdownContent.style.display = "block"
+    }
+  }
+</script>
+</body>
+</html>
